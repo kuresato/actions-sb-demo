@@ -38,4 +38,13 @@
 		</plugins>
 	</build>
 
+	<!-- Add Packages repository -->
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub OWNER Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/kuresato/actions-sb-demo</url>
+		</repository>
+	</distributionManagement>
+
 </project>
