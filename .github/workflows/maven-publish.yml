@@ -39,7 +39,7 @@ jobs:
       uses: mikepenz/action-junit-report@v3
       if: always()
       with:
-        report_paths: '**/build/test-results/test/TEST-*.xml'
+        report_paths: 'target/surefire-reports/TEST-*.xml'
 
     - run: echo ${{ github.workspace }}
     - run: echo $GITHUB_WORKSPACE
