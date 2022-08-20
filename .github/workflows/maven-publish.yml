@@ -20,6 +20,7 @@ jobs:
       packages: write
 
     steps:
+    # PRのブランチとターゲットのブランチをマージしてCI
     - uses: actions/checkout@v3
     - name: Set up JDK 11
       uses: actions/setup-java@v3
@@ -31,6 +32,14 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+
+    # JUnitテスト結果レポートを作成
+    # https://github.com/marketplace/actions/junit-report-action
+    - name: Publish Test Report
+      uses: mikepenz/action-junit-report@v3
+      if: always()
+      with:
+        report_paths: '**/build/test-results/test/TEST-*.xml'
 
     - run: echo ${{ github.workspace }}
     - run: echo $GITHUB_WORKSPACE
