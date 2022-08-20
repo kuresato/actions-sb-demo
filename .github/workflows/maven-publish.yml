@@ -7,8 +7,13 @@ name: Maven Package
 # PRがオープン、再オープンされた時、PRのヘッドが更新された場合
 on:
   pull_request:
-    types: [ opened, synchronize, reopened ]
-    branches: [ 'features/**', 'bugs/**' ]
+    types:
+      - opened
+      - synchronize
+      - reopened ]
+    branches:
+      - features/**
+      - bugs/**
 
 jobs:
   build:
