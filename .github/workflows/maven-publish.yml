@@ -3,9 +3,12 @@
 
 name: Maven Package
 
+# https://docs.github.com/ja/actions/using-workflows/events-that-trigger-workflows#pull_request
+# PRがオープン、再オープンされた時、PRのヘッドが更新された場合
 on:
-  release:
-    types: [created]
+  pull_request:
+    types: [ opened, synchronize, or reopened ]
+    branches: [ 'features/**', 'bugs/**' ]
 
 jobs:
   build:
