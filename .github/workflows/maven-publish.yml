@@ -35,6 +35,8 @@ jobs:
     - run: echo ${{ github.workspace }}
     - run: echo $GITHUB_WORKSPACE
     - run: cat ${{ github.workspace }}/settings.xml
+    - run: cat README.md
+    - run: cat UPDATE.md
 
     # - name: Publish to GitHub Packages Apache Maven
     #   run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
