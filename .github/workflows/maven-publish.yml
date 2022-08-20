@@ -7,11 +7,12 @@ name: Maven Package
 # PRがオープン、再オープンされた時、PRのヘッドが更新された場合
 on:
   pull_request:
-    types: [ assigned, opened, synchronize, reopened ]
+    types: [ opened, synchronize, reopened ]
+    branches [ features/**, bugs/** ]
     # types:
     #   - opened
     #   - synchronize
-    #   - reopened ]
+    #   - reopened
     # branches:
     #   - features/**
     #   - bugs/**
@@ -37,7 +38,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
+    # - name: Publish to GitHub Packages Apache Maven
+    #   run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+    #   env:
+    #     GITHUB_TOKEN: ${{ github.token }}
