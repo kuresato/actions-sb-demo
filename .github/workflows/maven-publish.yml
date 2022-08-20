@@ -40,6 +40,7 @@ jobs:
       if: always()
       with:
         report_paths: 'target/surefire-reports/TEST-*.xml'
+        token: ${{ github.token }}
 
     - run: echo ${{ github.workspace }}
     - run: echo $GITHUB_WORKSPACE
