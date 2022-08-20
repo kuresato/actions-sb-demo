@@ -4,7 +4,7 @@ UPDATE README
 
 ## Actions
 
-
+- [GitHub Actionsのドキュメント - GitHub Docs](https://docs.github.com/ja/actions)
 
 ## packages を使う
 
@@ -39,4 +39,9 @@ ActionsからはこれでPackagesに登録できる。
 
 参考
 - [MavenでGitHub PackagesへJARをデプロイする - Qiita](https://qiita.com/backpaper0@github/items/4d2d83a707b50b9f0151)
+
+## JUnitレポート
+
+- [JUnit Report Action · Actions · GitHub Marketplace](https://github.com/marketplace/actions/junit-report-action)
+- [GitHub Actions でユニットテストの結果をレポートする - Speaker Deck](https://speakerdeck.com/hkusu/github-actions-deyunitutotesutofalsejie-guo-worepotosuru)
 
