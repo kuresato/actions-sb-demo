@@ -8,7 +8,7 @@ name: Maven Package
 on:
   pull_request:
     types: [ opened, synchronize, reopened ]
-    branches: [ features/**, bugs/** ]
+    # branches: [ features/**, bugs/** ]
     # types:
     #   - opened
     #   - synchronize
