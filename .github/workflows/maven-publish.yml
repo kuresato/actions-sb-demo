@@ -33,6 +33,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - run: echo ${{ github.workspace }}
+    - run: echo $GITHUB_WORKSPACE
     - run: cat ${{ github.workspace }}/settings.xml
 
     # - name: Publish to GitHub Packages Apache Maven
